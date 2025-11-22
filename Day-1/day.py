@@ -1,21 +1,24 @@
-# Input from user
-sentence = input("Enter a sentence: ")
-
-# Replace spaces with underscoresd
-modified_sentence = sentence.replace(" " , "_")
-modified_sentence2=modified_sentence.replace("|","_")
-
-# Output the result
-print("Modified sentence:", modified_sentence2)
-# print("_")*1000
-# update this
-
-print("new")
-
-
-print("third commit  ",)
-
-
-print("fourth commit ",)
-
-
+{
+ "cells": [],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "test",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
