@@ -1,0 +1,8 @@
+class and object 
+
+class has data and attribute and functiona/method
+    -> attribute call iteself , method are called manually
+
+why python is called oops ?
+
+
