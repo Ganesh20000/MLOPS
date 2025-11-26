@@ -15,15 +15,15 @@ class Emp:
         #? encapsulation
         self.__name = "default user"
 
-        self.id=Emp.__user_id
-        Emp.__user_id +=1
+        # self.id=Emp.__user_id
+        # Emp.__user_id +=1
 
 
     
 
-
-        self.user=0
-        self.user+=1
+# 
+        # self.user=0
+        # self.user+=1
         self.idd=200
         self.names='suresh'
         self.salary=20000
