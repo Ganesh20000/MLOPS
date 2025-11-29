@@ -1,0 +1,11 @@
+2025-11-29 22:15:30,260 - model_building - DEBUG - Parameters retrieved from params.yaml
+2025-11-29 22:15:30,261 - model_building - ERROR - Failed to complete the model building process: 'model_building'
+2025-11-29 22:16:10,859 - model_building - DEBUG - Parameters retrieved from params.yaml
+2025-11-29 22:16:10,859 - model_building - ERROR - Failed to complete the model building process: 'model_building'
+2025-11-29 22:23:53,728 - model_building - DEBUG - Loaded params from C:\Users\karli\OneDrive\Desktop\all\python\MLOPS\Day-5\params.yaml
+2025-11-29 22:23:53,728 - model_building - DEBUG - Using params: {'model_type': 'random_forest', 'random_state': 42, 'n_estimators': 100, 'model_dir': './models'}
+2025-11-29 22:23:53,857 - model_building - DEBUG - Data loaded from data\processed\train_tfidf.csv with shape (4152, 501)
+2025-11-29 22:23:53,862 - model_building - DEBUG - Training RandomForest (n_estimators=100, random_state=42)
+2025-11-29 22:23:55,338 - model_building - DEBUG - Model training done
+2025-11-29 22:23:55,350 - model_building - DEBUG - Model saved to models\model.pkl
+2025-11-29 22:23:55,350 - model_building - INFO - Model training pipeline completed. Saved: models\model.pkl

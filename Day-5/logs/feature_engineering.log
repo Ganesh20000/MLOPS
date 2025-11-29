@@ -1,0 +1,8 @@
+2025-11-29 22:05:54,448 - feature_engineering - ERROR - File not found: params.yaml
+2025-11-29 22:05:54,448 - feature_engineering - ERROR - Failed to complete the feature engineering process: [Errno 2] No such file or directory: 'params.yaml'
+2025-11-29 22:11:03,872 - feature_engineering - DEBUG - Parameters retrieved from params.yaml
+2025-11-29 22:11:03,903 - feature_engineering - DEBUG - Data loaded and NaNs filled from ./data/interim/train_processed.csv
+2025-11-29 22:11:03,915 - feature_engineering - DEBUG - Data loaded and NaNs filled from ./data/interim/test_processed.csv
+2025-11-29 22:11:03,965 - feature_engineering - DEBUG - tfidf applied and data transformed
+2025-11-29 22:11:04,652 - feature_engineering - DEBUG - Data saved to ./data\processed\train_tfidf.csv
+2025-11-29 22:11:04,834 - feature_engineering - DEBUG - Data saved to ./data\processed\test_tfidf.csv
