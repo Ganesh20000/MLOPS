@@ -74,11 +74,11 @@ for name , mod in model.items():
     print(result)
 
 param={
-    'n_estimators':[50,100,200,300,400,500],
-    'max_depth':[None,10,20,25,30]
+    'n_estimators':[100,200,300,500],
+    'max_depth':[None,10,20]
 }
 
-grid=GridSearchCV(estimator=mod,cv=10,param_grid=param,scoring='accuracy',verbose=True)
+grid=GridSearchCV(estimator=mod,cv=5,param_grid=param,scoring='accuracy',verbose=True)
 
 
 #^ doing this part on mlflow
@@ -100,11 +100,37 @@ grid=GridSearchCV(estimator=mod,cv=10,param_grid=param,scoring='accuracy',verbos
 
 # mlflow.autolog()
 
-mlflow.set_experiment(exp_name)
-with mlflow.start_run():
+mlflow.set_experiment(exp_name) 
+with mlflow.start_run()as parent:
     grid.fit(X_train,y_train)
     best_params=grid.best_params_
     best_score=grid.best_score_
+
+
+    # #! log all children paramter
+
+    # for i in range(len(grid.cv_results_["params"])):
+
+    #     with mlflow.start_run(nested=True) as child:
+    #         mlflow.log_param(grid.cv_results_["params"][i])
+    #         mlflow.log_metric(grid.cv_results_["mean_test_score"][i])
+
+    cv = grid.cv_results_
+for i in range(len(cv['params'])):
+
+    params_i = cv['params'][i]  # dict
+
+    with mlflow.start_run(nested=True):
+
+        # log all params of this candidate
+        mlflow.log_params(params_i)
+
+        # log metrics
+        mlflow.log_metric("mean_test_score", float(cv['mean_test_score'][i]))
+        mlflow.log_metric("std_test_score", float(cv['std_test_score'][i]))
+        mlflow.log_metric("rank_test_score", int(cv['rank_test_score'][i]))
+
+        mlflow.set_tag("combo_id", i)
 
 
     mlflow.log_param("parameter",best_params)
